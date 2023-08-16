@@ -1,0 +1,181 @@
+*{
+    user-select: none;
+    cursor: default;
+}
+.contactform{
+    display:flex;
+    flex-direction: column;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.267);
+}
+
+.links{
+    text-decoration: none;
+    color: black;
+}
+
+.containerAll{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding-bottom: 40px;
+
+}
+
+label{
+    font-weight: bolder;
+}
+
+// --------------------------- Outros produtos
+.boxDialog{
+    background-color: none;
+    padding-left: 2px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    padding-right: 2px;
+    border-radius: 20px;
+    -webkit-transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out;
+    -o-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    .img1{
+        
+        border-radius: 20px;
+        width: 50%;
+    }
+    label{
+        text-align: center;
+        color: white;
+        margin-left: 10%;
+        align-items: center;
+    }
+   
+    }
+    .maisB{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .boxDialog:hover{
+        background-color: rgba(255, 255, 255, 0.596);
+        box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.164);
+        label{
+            color: black;
+        }
+    }
+    .text{
+    text-align: center;
+    margin: 20px;
+}
+
+// ------------------------------- Contatos
+.tittle-color1{
+    p{
+        font-size: medium;
+        font-weight: 500;
+    }
+}
+
+.imgLogo{
+    width: 160px;
+    align-items: center;
+    position: relative;
+    margin-left: 30px;
+}
+
+.nolink{
+    text-decoration: none;
+    font-weight: 400;
+    color: rgb(48, 48, 48);
+}
+
+
+.tittle_{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.b{
+    justify-content: center;
+    text-align: center;
+
+    .flexingContacts{
+        display: flex;
+
+        .iconS{
+            width: 15%;
+        }
+        .iconS2{
+            width: 7%;
+        }
+    }
+    .iconWPP{
+        width: 3%;
+    }
+    span{
+        font-weight: bold;
+    }
+    user-select:text;
+  
+    .iconS2{
+        width: 10%;
+    }
+}
+
+@media (max-width: 900px){
+    .containerAll{
+        display: block;
+    }
+    .a{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        .boxDialog{
+            background-color: rgba(255, 255, 255, 0.596);
+            box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.164);
+            label{
+                color: black;
+            }
+        }
+      
+    }
+    .b{
+       
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        .flexingContacts{
+            display: flex;
+            flex-direction: column;
+        }
+        margin: none;
+        border-radius: 10px;
+        .tittle-color1{
+            align-items: center;
+            margin-left: 20px;
+            padding: 10px;
+        }
+        .iconWPP{
+            width: 6%;
+    }
+    }
+    .contactform{
+        display:flex;
+        margin: 0;
+        flex-direction: column;
+        padding: 3px;
+        border-radius: 20px;
+        box-shadow: none;
+    }
+
+  
+} 

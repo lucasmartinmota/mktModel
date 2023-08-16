@@ -1,0 +1,70 @@
+<mat-grid-list cols="1" rowHeight="2:1" *ngIf="innerWidth > 700">
+    <mat-grid-tile>
+        <span class="sobre1">
+            Apresentação do sistema
+       </span>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <mat-grid-list cols="2" rowHeight="2:2" *ngIf="innerWidth > 700">
+    <mat-grid-tile>
+        <span class="texto-aux">Texto Alternativo</span><br><br>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="videoClass">
+        <video class="video1" [preload]="true" [loop]="true" [muted]="true" [autoplay]="true"  (loadedmetadata)="true">
+        <source src="assets/teste1.mp4" type="video/mp4">
+        </video>
+    </div>
+  </mat-grid-tile>
+  </mat-grid-list>
+  
+  <!-- ================================================================================================ -->
+
+  <mat-grid-list cols="2" rowHeight="2:2" *ngIf="innerWidth > 700">
+    <mat-grid-tile>
+      <div class="videoClass">
+        <video class="video1" [preload]="true" [loop]="true" [muted]="true" [autoplay]="true"  (loadedmetadata)="true">
+          <source src="assets/teste2.mp4" type="video/mp4">
+        </video>   
+    </div>
+    </mat-grid-tile>
+  <mat-grid-tile>
+    <span class="texto-aux">Texto Alternativo</span>
+  </mat-grid-tile>
+  </mat-grid-list>
+             
+  <!-- ================================================================================================ -->
+
+<mat-grid-list cols="2" rowHeight="2:2" *ngIf="innerWidth > 700">
+  <mat-grid-tile>
+    <span class="texto-aux">Texto Alternativo</span>
+  </mat-grid-tile>
+<mat-grid-tile>
+ <div class="videoClass">
+    <video class="video1" [preload]="true" [loop]="true" [muted]="true" [autoplay]="true"  (loadedmetadata)="true">
+      <source src="assets/teste3.mp4" type="video/mp4">
+    </video>  
+  </div>
+</mat-grid-tile>
+</mat-grid-list>
+
+<div class="containerAll" *ngIf="innerWidth < 700">
+<span class="sobre1">
+Apresentação do sistema
+</span><br><br>
+<span class="texto-aux">Texto Alternativo</span><br><br>
+<video class="video1" [loop]="true" [muted]="true" [autoplay]="true" [preload]="true" playsinline>
+<source src="assets/teste1.mp4" type="video/mp4">
+</video><br>   
+
+<span class="texto-aux">Texto Alternativo</span><br><br>
+<video class="video1" [loop]="true" [muted]="true" [autoplay]="true" [preload]="true" playsinline>
+<source src="assets/teste2.mp4" type="video/mp4">
+</video><br>
+
+<span class="texto-aux">Texto Alternativo</span><br><br>
+<video class="video1" [loop]="true" [muted]="true" [autoplay]="true" [preload]="true" playsinline>
+<source src="assets/teste3.mp4" type="video/mp4">
+</video><br>   
+</div>

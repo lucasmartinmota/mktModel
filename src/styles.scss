@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+@include mat.legacy-core();
+
+$mat-thema: (
+  10: #000000,
+  50: #e8f5e9,
+  100: #c8e6c9,
+  200: #a5d6a7,
+  300: #81c784,
+  400: #66bb6a,
+  500: #00238bdf,
+  600: #43a047,
+  700: #388e3c,
+  800: #2e7d32,
+  900: #1b5e20,
+  A100: #b9f6ca,
+  A200: #69f0ae,
+  A400: #00e676,
+  A700: #00c853,
+  contrast: (
+    10: rgba(255, 255, 255, 0),
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  )
+);
+
+$mat-primary: mat.define-palette($mat-thema, 10, 10, A100);
+$mat-accent: mat.define-palette($mat-thema, 500, 800, A100);
+$mat-warn: mat.define-palette(mat.$red-palette);
+$mat-transparent: mat.define-palette($mat-thema, 10, 10);
+
+$primary: #000000;
+$accent: #00238bdf;
+$warn: #f44336;
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $mat-primary,
+    accent: $mat-accent,
+    warn: $mat-warn,
+    transp: $mat-transparent
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+@include mat.all-component-themes($theme);
+@include mat.all-legacy-component-themes($theme);
+
+html, body { height: 100%; scroll-behavior: smooth;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

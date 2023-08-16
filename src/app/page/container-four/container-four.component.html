@@ -1,0 +1,92 @@
+<div class="containerAll">
+    <div class="a">
+        <h1 class="tittle-color1">
+            OUTROS PRODUTOS:
+        </h1>
+        <div class="boxDialog">
+        <button class="maisB" (click)="openDialog()"><div>
+            <img #img1 class="img1" src="assets/product.png">
+            <br><label for="img1">PRODUTO 1 </label>
+        </div></button></div><br>
+
+        <div class="boxDialog">
+        <button class="maisB" (click)="openDialog1()"><div>
+            <img #img2 class="img1" src="assets/product.png">
+            <br><label for="img2">PRODUTO 2 </label>
+        </div></button>
+        </div><br>
+
+        <div class="boxDialog">
+        <button class="maisB" (click)="openDialog2()"><div>
+            <img #img3 class="img1" src="assets/product.png">
+            <br><label for="img3">PRODUTO 3 </label>
+        </div></button></div>
+    </div>
+    <div class="b">
+        <h1 class="tittle-color1">
+        Comercial:<br>
+        <div class="flexingContacts">
+            <div>
+                <p>
+                    <img src="assets/man.png" class="iconS"><br>
+                    <span>Contato</span><br>
+                    <a class="nolink" href="https://wa.me/5515992017928">(99) 9999-9999 
+                        <img class="iconWPP" src="assets/whatssapp.png"></a><br>
+                    email@email.com<br></div>
+                <p>
+            <div>
+                <p>
+                <img src="assets/woman.png" class="iconS"><br>
+                <span>Contato</span><br>    
+                <a class="nolink" href="https://wa.me/5515992017928">(99) 9999-9999 
+                <img class="iconWPP" src="assets/whatssapp.png"></a><br>
+                email@email.com
+                <p>
+            </div>
+        </div>
+        <br>
+       
+        <span class="tittle_">Suporte:</span><br><br>
+              <p>
+                    <img src="assets/suport.png" class="iconS2"><br>
+                    <a class="nolink" href="https://wa.me/5515992017928">(99) 9999-9999
+                    <img class="iconWPP" src="assets/whatssapp.png"></a><br>
+                    suporte@suporte.com.br<br>
+            <p> 
+            <p>  
+                <span class="tittle_">SAC:</span><br>
+                sac@sac.com.br<br> 
+            <p>
+        </h1>
+    </div>
+
+
+
+    <form #form2 class="contactform" [formGroup]="formSend" (ngSubmit)="onSubmit()">
+        <label>Nos envie um email:</label><br>
+        <mat-form-field appearance="outline">
+            <mat-label>Nome:</mat-label>
+            <input type="text" matInput required formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field  appearance="outline">
+            <mat-label>Email:</mat-label>
+            <input matInput required type="email" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Telefone:</mat-label>
+            <input matInput type="number" formControlName="tel">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Mensagem:</mat-label>
+            <textarea matInput required formControlName="msg" required>
+            </textarea>
+        </mat-form-field>
+        <!-- <ngx-recaptcha2 #captchaElem
+        [siteKey]="siteKey"
+        [useGlobalDomain]="false"
+        formControlName="recaptcha">
+      </ngx-recaptcha2> -->
+        <button mat-raised-button [disabled]="formSend.invalid" 
+        type="submit" color="primary">Enviar</button>
+    </form>
+</div>

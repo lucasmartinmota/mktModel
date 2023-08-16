@@ -1,0 +1,48 @@
+*{
+    user-select: none;
+    cursor: default;
+}
+.tittle-color1{
+    color:#000000;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInText 0.9s 0.9s both;
+}
+.tittle-color2{
+    color: #3a6bff85;
+    font-weight: bold;
+}
+
+@keyframes fadeInText{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+div{
+    display: block;
+    margin: 0;
+    padding: 270px;
+}
+@media (max-width: 900px)
+{
+    div{
+        display: block;
+        margin: 0;
+        padding: 70px;
+        padding-bottom: 200px;
+    }
+    .tittle-color1{
+        font-size: 38px;
+    }
+    .tittle-color2{
+        color: #1b5e20;
+        font-weight: bold;
+    }
+    
+}
